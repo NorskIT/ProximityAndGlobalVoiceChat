@@ -4,7 +4,7 @@ using Mono.Cecil;
 
 const string guid = "NorskIT.ProximityAndGlobalVoiceChat";
 const string name = "ProximityAndGlobalVoiceChat";
-const string version = "0.2.3";
+const string version = "0.2.4";
 const string translation = "ProximityVoiceChat.translations.English.yml";
 if (args.Length < 2) throw new ArgumentException("Usage: VerifyFork identity|conflicts|references <dll-or-plugin-directory> [original-dll | managed-dir core-dir]");
 

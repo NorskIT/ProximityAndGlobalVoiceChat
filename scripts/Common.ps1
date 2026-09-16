@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 $ProjectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $ModName = 'ProximityAndGlobalVoiceChat'
-$ModVersion = '0.2.3'
+$ModVersion = '0.2.4'
 $Verifier = Join-Path $ProjectRoot 'tools/VerifyFork/bin/Release/net10.0/VerifyFork.dll'
 
 function Invoke-Dotnet {

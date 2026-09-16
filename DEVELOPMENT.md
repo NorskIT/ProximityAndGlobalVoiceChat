@@ -1,12 +1,12 @@
 # ProximityAndGlobalVoiceChat
 
-Current package: **0.2.3**. This release updates the icon and README; audio behavior and voice protocol are unchanged from 0.2.2.
+Current package: **0.2.4**. This release clarifies the README comparison with upstream 1.0.2; audio behavior and voice protocol are unchanged from 0.2.2.
 
 NorskIT's fork of Azumatt ProximityVoiceChat 1.0.2. Version **0.2.2** restores the original mono/Unity 3D output for received Local voice while keeping Global and monitor playback from 0.2.1. Global push-to-talk and fullband audio were introduced in 0.2.0. Windows x64 Steam clients only. Voice protocol 2 is compatible across 0.2.0, 0.2.1 and 0.2.2; original 1.0.2 and fork 0.1.0 are incompatible with its voice protocol.
 
 ## Test from Gale
 
-Select **Development**, confirm **ProximityAndGlobalVoiceChat 0.2.3** is enabled, then **Launch modded**.
+Select **Development**, confirm **ProximityAndGlobalVoiceChat 0.2.4** is enabled, then **Launch modded**.
 
 1. Open **Settings > Voice > Keys**. **Push to talk locally** preserves your existing binding (B by default). Bind **Push to talk globally** to a different key; it starts unbound. Holding both selects global. Voice activation remains local.
 2. Select your microphone. **Voice quality: High** uses 96 kbit/s; Custom allows 32-128. Noise suppression starts enabled. Existing microphone gain, keybinds and volume settings are preserved.
@@ -51,7 +51,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Test-Baseline.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Import-Gale.ps1
 ```
 
-Close Valheim before import. Gale's CLI registers the local mod and updates the visible list asynchronously. Package output: `artifacts/NorskIT-ProximityAndGlobalVoiceChat-0.2.3.zip`. For a second client use Gale's local-mod import. Disable the original mod first.
+Close Valheim before import. Gale's CLI registers the local mod and updates the visible list asynchronously. Package output: `artifacts/NorskIT-ProximityAndGlobalVoiceChat-0.2.4.zip`. For a second client use Gale's local-mod import. Disable the original mod first.
 
 Normal builds use hash-verified DLLs in `native/win-x64`. `scripts/Build-Native.ps1` rebuilds from pinned Opus/RNNoise commits using downloaded, hash-verified Zig 0.14.1 and RNNoise model data. It refreshes artifact hashes in `native/dependencies.lock.json` and the packaged notice; review these changes after rebuilding. PE timestamps may change artifact hashes. The package includes the managed plugin plus `Native/pagvc_opus.dll` and `Native/pagvc_rnnoise.dll`, license notices and provenance. Missing native dependencies produce a visible audio error, with no fallback to the old codec.
 

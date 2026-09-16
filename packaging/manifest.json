@@ -1,6 +1,6 @@
 {
   "name": "ProximityAndGlobalVoiceChat",
-  "version_number": "0.2.3",
+  "version_number": "0.2.4",
   "website_url": "https://github.com/NorskIT/ProximityAndGlobalVoiceChat",
   "description": "Local and global push-to-talk with fullband Opus voice and RNNoise suppression. Windows x64 Steam clients; compatible with voice protocol 2 (0.2.x).",
   "dependencies": ["denikson-BepInExPack_Valheim-5.4.2350"]

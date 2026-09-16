@@ -15,7 +15,7 @@ using UnityEngine;
 
 namespace ProximityVoiceChat;
 
-[BepInPlugin("NorskIT.ProximityAndGlobalVoiceChat", "ProximityAndGlobalVoiceChat", "0.2.3")]
+[BepInPlugin("NorskIT.ProximityAndGlobalVoiceChat", "ProximityAndGlobalVoiceChat", "0.2.4")]
 [BepInIncompatibility("Azumatt.ProximityVoiceChat")]
 public class ProximityVoiceChatPlugin : BaseUnityPlugin
 {
@@ -74,7 +74,7 @@ public class ProximityVoiceChatPlugin : BaseUnityPlugin
 
 	internal const string ModName = "ProximityAndGlobalVoiceChat";
 
-	internal const string ModVersion = "0.2.3";
+	internal const string ModVersion = "0.2.4";
 
 	internal const string Author = "NorskIT";
 
@@ -95,7 +95,7 @@ public class ProximityVoiceChatPlugin : BaseUnityPlugin
 	private static readonly ConfigSync ConfigSync = new ConfigSync("NorskIT.ProximityAndGlobalVoiceChat")
 	{
 		DisplayName = "ProximityAndGlobalVoiceChat",
-		CurrentVersion = "0.2.3",
+		CurrentVersion = "0.2.4",
 		MinimumRequiredVersion = "0.2.0",
 		IsLocked = false
 	};
@@ -205,7 +205,7 @@ public class ProximityVoiceChatPlugin : BaseUnityPlugin
 	public void Awake()
 	{
 		Instance = this;
-        Log.LogInfo("ProximityAndGlobalVoiceChat 0.2.3 - local fork of Azumatt ProximityVoiceChat 1.0.2");
+        Log.LogInfo("ProximityAndGlobalVoiceChat 0.2.4 - local fork of Azumatt ProximityVoiceChat 1.0.2");
 		Localizer.Load();
 		bool saveOnConfigSet = base.Config.SaveOnConfigSet;
 		base.Config.SaveOnConfigSet = false;
