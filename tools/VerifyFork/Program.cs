@@ -4,7 +4,7 @@ using Mono.Cecil;
 
 const string guid = "NorskIT.ProximityAndGlobalVoiceChat";
 const string name = "ProximityAndGlobalVoiceChat";
-const string version = "0.2.2";
+const string version = "0.2.3";
 const string translation = "ProximityVoiceChat.translations.English.yml";
 if (args.Length < 2) throw new ArgumentException("Usage: VerifyFork identity|conflicts|references <dll-or-plugin-directory> [original-dll | managed-dir core-dir]");
 
@@ -91,7 +91,7 @@ if (args[0] == "conflicts")
 using (var module = ModuleDefinition.ReadModule(args[1]))
 {
     Require(module.Assembly.Name.Name == name, "Wrong assembly identity.");
-    Require(module.Assembly.Name.Version == new Version(0, 2, 2, 0), "Wrong assembly version.");
+    Require(module.Assembly.Name.Version == new Version(version + ".0"), "Wrong assembly version.");
     var plugins = module.Types.SelectMany(t => t.CustomAttributes)
         .Where(a => a.AttributeType.FullName == "BepInEx.BepInPlugin").ToArray();
     Require(plugins.Length == 1, "Expected exactly one plugin.");
