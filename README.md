@@ -10,6 +10,12 @@ For Valheim on Windows x64 using Steam.
 - **Global voice:** talk to everyone using the mod on your server, regardless of distance.
 - Separate push-to-talk keys, configurable under **Settings > Voice**.
 
+## Changes from the original (1.0.2)
+
+- Added global voice chat with a separate push-to-talk key.
+- Switched from Concentus Opus, limited to wideband at 24 kbit/s by default, to native Opus with fullband support at 96 kbit/s by default.
+- Added RNNoise to reduce background noise while speaking.
+
 ## Installation (manual)
 
 1. Install BepInExPack Valheim (see Dependencies below).
