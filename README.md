@@ -1,4 +1,4 @@
-﻿A fork of Azumatt's [ProximityVoiceChat](https://valheim.hexium.gg/mods/Azumatt/ProximityVoiceChat), adding local and global voice chat with improved audio quality.
+A fork of Azumatt's [ProximityVoiceChat](https://valheim.hexium.gg/mods/Azumatt/ProximityVoiceChat), adding local and global voice chat with improved audio quality.
 
 For Valheim on Windows x64 using Steam.
 
