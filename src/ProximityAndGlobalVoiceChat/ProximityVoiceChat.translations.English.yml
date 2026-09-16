@@ -1,0 +1,75 @@
+# English strings for ProximityVoiceChat.
+# Copy this file, rename it for your language, and drop it next to the dll.
+# See https://github.com/blaxxun-boop/LocalizationManager
+
+pvc_heading_microphone: "Microphone"
+pvc_heading_listening: "Listening"
+pvc_heading_keys: "Keys"
+pvc_heading_interface: "Interface"
+pvc_heading_test: "Test"
+
+pvc_input_device: "Input device"
+pvc_device_none: "no microphone"
+pvc_mic_gain: "Your volume to others"
+pvc_gate_threshold: "Voice gate threshold"
+pvc_voice_activation: "Voice activation (off = push to talk)"
+pvc_auto_gain: "Auto gain (level me automatically)"
+pvc_mute_self: "Mute myself"
+
+pvc_incoming_volume: "Everyone else's volume"
+pvc_deafen: "Deafen (hear nobody, send nothing)"
+pvc_duck_music: "Quieten music while people talk"
+pvc_adaptive_jitter: "Adaptive buffer (smooth out bad connections)"
+pvc_occlusion: "Muffle voices through walls"
+pvc_underwater: "Muffle everything while swimming"
+pvc_reverb: "Let caves and halls echo voices"
+
+pvc_key_ptt: "Push to talk locally"
+pvc_key_mute: "Mute myself"
+pvc_key_deafen: "Deafen"
+pvc_key_unbound: "unbound"
+pvc_key_press: "press a key..."
+pvc_note_binding: "Click a key to rebind it. Escape cancels, Backspace clears it."
+
+pvc_speaking_indicator: "Show a speaker above my head when I talk"
+pvc_indicator_height: "My speaker height"
+pvc_peer_indicators: "Show a speaker above other people's heads"
+pvc_peer_indicator_height: "Their speaker height"
+pvc_peer_indicator_scale: "Their speaker size"
+pvc_peer_through_walls: "Keep showing it through walls"
+pvc_jaw_movement: "Move mouths when people talk"
+pvc_jaw_angle: "Jaw opening angle"
+pvc_jaw_sensitivity: "Jaw sensitivity"
+pvc_jaw_axis: "Jaw axis"
+
+pvc_monitor_volume: "Monitor volume"
+pvc_hear_myself: "Hear myself while I talk"
+pvc_probe_button: "Write a microphone probe to the log"
+pvc_test_tone: "Test tone instead of my microphone"
+
+pvc_note_perplayer: "Per player volume and mute live in the vanilla player list. Open it from the menu, or bind a key under Keys."
+pvc_note_menu_mic: "The microphone runs while this tab is open, so you can test without joining a world."
+
+pvc_no_microphone: "No microphone. Pick a device below."
+pvc_not_connected: "Not connected."
+
+pvc_meter_input: "input"
+pvc_meter_sent: "processed"
+pvc_meter_heard: "heard"
+
+# {0} device name, {1} sample rate, {2} channel count
+pvc_status_device: "{0}   {1} Hz   {2} ch"
+# {0} input peak, {1} sent rms, {2} heard rms, {3} meter floor in dB
+pvc_numbers: "input peak {0}   processed rms {1}   heard rms {2}   (bars are dB, floor {3})"
+# {0} packets sent, {1} received, {2} dropped
+pvc_stats: "sent {0}   received {1}   dropped {2}"
+
+pvc_mute: "mute"
+
+pvc_msg_muted: "Microphone muted"
+pvc_msg_unmuted: "Microphone live"
+pvc_msg_deafened: "Deafened"
+pvc_msg_undeafened: "Hearing again"
+pvc_volume_label: "Volume"
+pvc_too_loud: "too loud"
+pvc_enable_voice: "Enable my microphone"

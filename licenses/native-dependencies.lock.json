@@ -1,0 +1,24 @@
+﻿{
+    "opus":  {
+                 "commit":  "22244de5a79bd1d6d623c32e72bf1954b56235be",
+                 "source":  "https://github.com/xiph/opus",
+                 "version":  "1.6.1"
+             },
+    "rnnoise":  {
+                    "commit":  "904a876dce1f9ab8860c0a5000ed151f9f6eef58",
+                    "source":  "https://github.com/xiph/rnnoise",
+                    "modelSha256":  "4AC81C5C0884EC4BD5907026AAAE16209B7B76CD9D7F71AF582094A2F98F4B43",
+                    "version":  "0.2"
+                },
+    "files":  [
+                  {
+                      "sha256":  "A1C4A79C1C041F17A91F7F3554523EEA1EC47A93C3C82DA6E47039874C189F08",
+                      "file":  "pagvc_opus.dll"
+                  },
+                  {
+                      "sha256":  "3B66E47E76B907CF41D855D2006A8B9CAAD06C1A263A1EA105C29B76C44E4732",
+                      "file":  "pagvc_rnnoise.dll"
+                  }
+              ],
+    "compiler":  "Zig 0.14.1 x86_64-windows-gnu -O3"
+}

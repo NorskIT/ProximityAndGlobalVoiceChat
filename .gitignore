@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+.cache/
+.tools/
+artifacts/
+Environment.local.props
+.vs/
+*.user
+
+native/**/*.pdb
+native/**/*.lib

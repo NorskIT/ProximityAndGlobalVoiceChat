@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <VALHEIM_INSTALL Condition="'$(VALHEIM_INSTALL)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Valheim</VALHEIM_INSTALL>
+    <BEPINEX_PATH Condition="'$(BEPINEX_PATH)' == ''">$(APPDATA)\com.kesomannen.gale\valheim\profiles\Development\BepInEx</BEPINEX_PATH>
+  </PropertyGroup>
+  <Import Project="Environment.local.props" Condition="Exists('Environment.local.props')" />
+  <Target Name="CheckLocalReferences" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="!Exists('$(VALHEIM_INSTALL)/valheim_Data/Managed/assembly_valheim.dll')" Text="Set VALHEIM_INSTALL in Environment.local.props to your Valheim installation." />
+    <Error Condition="!Exists('$(BEPINEX_PATH)/core/BepInEx.dll')" Text="Set BEPINEX_PATH in Environment.local.props to the Development profile's BepInEx directory." />
+  </Target>
+</Project>

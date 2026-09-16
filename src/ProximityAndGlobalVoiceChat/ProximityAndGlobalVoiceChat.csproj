@@ -1,0 +1,116 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../../Environment.props" />
+  <PropertyGroup>
+    <AssemblyName>ProximityAndGlobalVoiceChat</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net481</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <Nullable>annotations</Nullable>
+    <Deterministic>true</Deterministic>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <!-- Unity 6 exposes Span in its own Mono mscorlib. Compile against the
+         game's framework assemblies, never deploy these reference files. -->
+    <NoStdLib>true</NoStdLib>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="ProximityVoiceChat.translations.English.yml" />
+    <None Remove="ILRepack.List" />
+    <EmbeddedResource Include="ProximityVoiceChat.translations.English.yml" LogicalName="ProximityVoiceChat.translations.English.yml" />
+    <EmbeddedResource Include="ILRepack.List" LogicalName="ILRepack.List" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>$(BEPINEX_PATH)/core/BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(BEPINEX_PATH)/core/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="assembly_valheim" Publicize="true">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/assembly_valheim.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="assembly_guiutils" Publicize="true">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/assembly_guiutils.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/Unity.TextMeshPro.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="mscorlib" HintPath="$(VALHEIM_INSTALL)/valheim_Data/Managed/mscorlib.dll" Private="false" />
+    <Reference Include="System" HintPath="$(VALHEIM_INSTALL)/valheim_Data/Managed/System.dll" Private="false" />
+    <Reference Include="System.Core" HintPath="$(VALHEIM_INSTALL)/valheim_Data/Managed/System.Core.dll" Private="false" />
+    <Reference Include="System.Xml" HintPath="$(VALHEIM_INSTALL)/valheim_Data/Managed/System.Xml.dll" Private="false" />
+    <Reference Include="Splatform">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/Splatform.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/com.rlabrecque.steamworks.net.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/UnityEngine.AudioModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="assembly_utils">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/assembly_utils.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>$(VALHEIM_INSTALL)/valheim_Data/Managed/UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine" HintPath="$(VALHEIM_INSTALL)/valheim_Data/Managed/UnityEngine.dll" Private="false" />
+    <Reference Include="netstandard" HintPath="$(VALHEIM_INSTALL)/valheim_Data/Managed/netstandard.dll" Private="false" />
+    <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.2" PrivateAssets="all" IncludeAssets="build;buildTransitive;contentFiles" />
+    <!-- Already provided by the current game's Mono framework. -->
+    <Compile Remove="ThirdParty/System.Diagnostics.CodeAnalysis/**/*.cs" />
+    <!-- Unreferenced compiler data container; ILSpy expanded its only array use. -->
+    <Compile Remove="-1f0b1d75-e10c-4d8b-b252-7e4e0b261763--PrivateImplementationDetails-.cs" />
+  </ItemGroup>
+<ItemGroup><Content Include="../../native/win-x64/*.dll" Link="Native/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" /></ItemGroup><ItemGroup><Compile Remove="ThirdParty/Concentus*/**/*.cs" /><Compile Include="ThirdParty/Concentus.Common/SpeexResampler.cs" /><Compile Include="ThirdParty/Concentus.Common/Inlines.cs" /></ItemGroup></Project>
