@@ -36,7 +36,7 @@ For the regression check: enable Hear myself and Raw, enable test tone, hold one
 
 ## Audio changes
 
-The original codec forced SILK-only wideband at 24 kbit/s. This restricted upper frequencies despite capturing at 48 kHz. Version 0.2 uses native Opus 1.6.1, automatic mode/fullband allowed, 48 kHz mono, 20 ms frames, 96 kbit/s VBR and complexity 10. Actual mode can adapt to input and loss; FEC is available when supported by the selected Opus mode, otherwise loss concealment applies.
+The original encoder setup forced SILK-only wideband, with a default target bitrate of 24 kbit/s configurable from 6 to 64 kbit/s. This restricted upper frequencies despite capturing at 48 kHz. Version 0.2 uses native Opus 1.6.1, automatic mode/fullband allowed, 48 kHz mono, 20 ms frames, 96 kbit/s VBR and complexity 10. Actual mode can adapt to input and loss; FEC is available when supported by the selected Opus mode, otherwise loss concealment applies.
 
 RNNoise 0.2 runs locally before bounded automatic gain and a peak limiter. Hold-to-talk does not use the voice-activation threshold. Stateful Speex resampling replaces linear resampling for non-48-kHz microphones. Packets are reordered before decoding; playback uses a fixed sample rate rather than changing voice pitch to correct a buffer. Default prefill is 60 ms with a 200 ms compressed-packet backlog limit; microphone, codec, output buffering and hardware add further latency.
 

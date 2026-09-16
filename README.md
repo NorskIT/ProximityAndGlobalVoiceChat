@@ -13,7 +13,7 @@ For Valheim on Windows x64 using Steam.
 ## Changes from the original (1.0.2)
 
 - Added global voice chat with a separate push-to-talk key.
-- Switched from Concentus Opus, limited to wideband at 24 kbit/s by default, to native Opus with fullband support at 96 kbit/s by default.
+- Replaced the original Concentus Opus setup (forced SILK/wideband; 24 kbit/s default, configurable from 6-64 kbit/s) with native Opus allowing fullband audio at a default target bitrate of 96 kbit/s.
 - Added RNNoise to reduce background noise while speaking.
 
 ## Installation (manual)
